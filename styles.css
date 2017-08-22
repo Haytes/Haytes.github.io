@@ -1,22 +1,175 @@
-body {
-  margin: 0;
-  width: auto;
-  height: auto;
-  background-color: #474747 !important;
-  overflow:auto;
+/*!
+ * Start Bootstrap - Landing Page (http://startbootstrap.com/template-overviews/landing-page)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
+ */
+
+body, html, header {
+  width: 100%;
+  height: 100%;
 }
 
-ul.topnav {
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.landing-bg{
+  background: url(https://scontent.fybz2-2.fna.fbcdn.net/v/t31.0-8/17015692_1400656109986192_6831322804365413260_o.jpg?oh=3efccde87845ef1793ee433452b8ef4a&oe=59ECAED7) no-repeat center center;
+  background-size: cover;
+}
+.intro-image{
+  display: block;
+  width: 250px;
+  height: auto;
+  border-radius: 100%;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 4px;
+}
+.intro-header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #f8f8f8;
+}
+
+.intro-message {
+  position: relative;
+}
+
+.intro-message>h1 {
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  font-size: 5em;
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.intro-message>h3 {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.intro-social-buttons i {
+  font-size: 80%;
+}
+
+@media(max-width:767px) {
+  .intro-message {
+    padding-bottom: 15%;
+  }
+  .intro-message>h1 {
+    font-size: 3em;
+  }
+  ul.intro-social-buttons>li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  ul.intro-social-buttons>li:last-child {
+    margin-bottom: 0;
+  }
+  .intro-divider {
+    width: 100%;
+  }
+}
+
+.network-name {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.content-section-a {
+  padding: 50px 0;
+  background-color: #f8f8f8;
+}
+
+.content-section-b {
+  padding: 50px 0;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+
+}
+
+.section-heading-spacer {
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+  padding: 100px 0;
+  color: #f8f8f8;
+  background: url(../img/banner-bg.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.banner h2 {
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  font-size: 3em;
+}
+
+.banner ul {
+  margin-bottom: 0;
+}
+
+.banner-social-buttons {
+  float: right;
+  margin-top: 0;
+}
+
+@media(max-width:1199px) {
+  ul.banner-social-buttons {
+    float: left;
+    margin-top: 15px;
+  }
+}
+
+@media(max-width:767px) {
+  .banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 3em;
+  }
+  ul.banner-social-buttons>li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  ul.banner-social-buttons>li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+footer {
+  padding: 50px 0;
+  background-color: #f8f8f8;
+}
+.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+
 }
 
-ul.topnav li {float: left;}
+.topnav li {float: left;}
 
-ul.topnav li namelogo{
+.topnav li namelogo{
     display: block;
     color: white;
     text-align: center;
@@ -24,7 +177,7 @@ ul.topnav li namelogo{
     text-decoration: none;
 }
 
-ul.topnav li a {
+.topnav li a {
     display: block;
     color: white;
     text-align: center;
@@ -32,42 +185,13 @@ ul.topnav li a {
     text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: #111;}
+.topnav li a:hover:not(.active) {background-color: #111;}
 
-ul.topnav li a.active {background-color: #4CAF50;}
+.topnav li a.active {background-color: #4CAF50;}
 
-ul.topnav li.right {float: right;}
+.topnav li.right {float: right;}
 
 @media screen and (max-width: 600px){
-    ul.topnav li.right,
-    ul.topnav li {float: none;}
-}
-
-.profile-avatar{
-    display: block;
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
-    margin: auto;
-    margin-top: 10%;
-    background-color: white;
-    padding: 4px;
-}
-
-.name{
-    margin-top: 40px;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Nothing You Could Do', cursive;
-    font-size: 30px;
-    color: white;
-}
-
-.intro{
-    margin-top: 20px;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Nothing You Could Do', cursive;
-    font-size: 20px;
-    color: white;
+  .topnav li.right,
+  .topnav li {float: none;}
 }
