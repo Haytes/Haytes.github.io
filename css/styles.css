@@ -248,3 +248,45 @@ footer {
   .portfolio-grid .mix {
     width: 31%;
     margin: 1%; } }
+
+    .btn {
+      font-weight: 900;
+      padding: 12px 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 0; }
+
+    .btn-primary {
+      border: 1px solid white;
+      background-color: transparent; }
+      .btn-primary:hover, .btn-primary:focus {
+        color: #41C4AB;
+        border-color: white;
+        background-color: white; }
+
+    .btn-secondary {
+      border: 1px solid #222;
+      background-color: transparent; }
+      .btn-secondary:hover, .btn-secondary:focus {
+        color: white;
+        border-color: #41C4AB;
+        background-color: #41C4AB; }
+
+    button:hover {
+      cursor: pointer; }
+
+    .btn-full-width {
+      font-size: 26px;
+      font-weight: 200;
+      padding: 50px 0;
+      letter-spacing: normal;
+      text-transform: none;
+      color: white;
+      border: 0;
+      border-radius: 0;
+      background-color: #222; }
+      .btn-full-width:hover {
+        color: white;
+        background-color: #41C4AB; }
+      .btn-full-width:focus {
+        color: white; }
