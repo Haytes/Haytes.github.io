@@ -260,7 +260,7 @@ footer {
       border: 1px solid white;
       background-color: transparent; }
       .btn-primary:hover, .btn-primary:focus {
-        color: #41C4AB;
+        color: #333;
         border-color: white;
         background-color: white; }
 
@@ -269,8 +269,8 @@ footer {
       background-color: transparent; }
       .btn-secondary:hover, .btn-secondary:focus {
         color: white;
-        border-color: #41C4AB;
-        background-color: #41C4AB; }
+        border-color: #333;
+        background-color: #333; }
 
     button:hover {
       cursor: pointer; }
@@ -287,6 +287,6 @@ footer {
       background-color: #222; }
       .btn-full-width:hover {
         color: white;
-        background-color: #41C4AB; }
+        background-color: #333; }
       .btn-full-width:focus {
         color: white; }
