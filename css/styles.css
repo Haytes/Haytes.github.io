@@ -162,6 +162,7 @@ footer {
     padding: 0;
     overflow: hidden;
     background-color: transparent;
+    /*position: fixed;*/
 
 }
 
@@ -193,3 +194,57 @@ footer {
   .topnav li.right,
   .topnav li {float: none;}
 }
+
+.portfolio-grid .mix {
+  float: left;
+  overflow: hidden;
+  width: 48%;
+  margin: 1%; }
+  .portfolio-grid .mix .portfolio-wrapper {
+    position: relative !important;
+    overflow: hidden;
+    cursor: pointer;
+    background: #222; }
+    .portfolio-grid .mix .portfolio-wrapper img {
+      position: relative;
+      max-width: 100%;
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      transition: all .5s; }
+      .portfolio-grid .mix .portfolio-wrapper img:hover {
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1); }
+    .portfolio-grid .mix .portfolio-wrapper .caption {
+      position: absolute;
+      bottom: -75px;
+      width: 100%;
+      height: 75px;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      transition: all .5s; }
+      .portfolio-grid .mix .portfolio-wrapper .caption .caption-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #41C4AB; }
+      .portfolio-grid .mix .portfolio-wrapper .caption .caption-text {
+        position: relative;
+        z-index: 500;
+        padding: 15px 8px;
+        color: white; }
+        .portfolio-grid .mix .portfolio-wrapper .caption .caption-text a.text-title {
+          color: white; }
+        .portfolio-grid .mix .portfolio-wrapper .caption .caption-text .text-category {
+          font-size: 12px;
+          display: block; }
+  .portfolio-grid .mix:hover .portfolio-wrapper .caption {
+    bottom: 0; }
+
+@media (min-width: 768px) {
+  .portfolio-grid .mix {
+    width: 31%;
+    margin: 1%; } }
