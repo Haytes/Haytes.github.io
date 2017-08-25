@@ -265,7 +265,7 @@ footer {
         background-color: white; }
 
     .btn-secondary {
-      border: 1px solid #222;
+      border: 1px solid #333;
       background-color: transparent; }
       .btn-secondary:hover, .btn-secondary:focus {
         color: white;
@@ -284,9 +284,13 @@ footer {
       color: white;
       border: 0;
       border-radius: 0;
-      background-color: #222; }
+      background-color: #333; }
       .btn-full-width:hover {
         color: white;
         background-color: #333; }
       .btn-full-width:focus {
         color: white; }
+
+.social-logo {
+  padding: 10px;
+}
