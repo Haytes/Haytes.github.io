@@ -87,7 +87,7 @@ nav {
   margin: 0 auto 0 auto;
 }
 .about-text {
-  margin: 0 auto 0 auto;
+  margin: 0 auto 1em auto;
   padding: 0 10rem 0 10rem;
   font-size: 1.3rem;
 }
@@ -133,6 +133,29 @@ nav {
 img {
   border-radius: 5px 5px 0 0;
 }
+.portfolio-button{
+  text-decoration: none;
+  display: flex;
+  margin: 1rem auto 1rem auto;
+  border-style: solid;
+  border-color: #333;
+  color: #333;
+  background-color: #f3f3f3;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: .5em 1em .5em 1em;
+}
+.portfolio-button:hover{
+  background-color: #333;
+  color: #f8f8f8;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+.align{
+    margin: 1rem auto 1rem auto;
+
+}
+
 
 /* entire container, keeps perspective */
 .flip-container {
@@ -172,6 +195,7 @@ img {
 
 
 .overlay-button {
+  border-radius: 5px;
   background-color: transparent;
   color: black;
   border: 2px solid #555555;
