@@ -43,6 +43,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #333;
 }
 .intro-divider {
   width: 50em;
@@ -223,4 +224,10 @@ img {
 .contact-links > a {
   color: #333;
   margin: auto 2em auto 2em ;
+}
+.construction{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%
 }
