@@ -213,6 +213,8 @@ img {
   display: flex;
   justify-content: center;
   background-color: #eee;
+  position: absolute;
+  bottom: 0;
 }
 .contact-links {
   display: flex;
@@ -224,6 +226,7 @@ img {
 .contact-links > a {
   color: #333;
   margin: auto 2em auto 2em ;
+  margin-bottom: 1em;
 }
 .construction{
   display: block;
