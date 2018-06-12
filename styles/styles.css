@@ -65,9 +65,9 @@ img {
 /*intro*/
 .section.intro{
 	padding-top: 6em;
-    padding-left: 16em;
-    height:105vh;
-    width: auto;
+  padding-left: 16em;
+  height:105vh;
+  width: auto;
 }
 
 .name{
@@ -80,22 +80,25 @@ img {
     font-size: 50px;
     white-space: nowrap;
     margin-top: 0;
+    padding-top: .1em;
 }
 .subtitle{
     font-size: 
     white-space: nowrap;
     margin-top: 0;
+    padding-top: .75em;
 }
 
 .typewriter{
     /*position: relative;*/
     text-align: left;
-    margin-right: 60px;
+    margin-right: 55px;
     border-right: 2px solid rgba(255,255,255,.75);
     font-size: 180%;
     /*text-align: center;*/
     white-space: nowrap;
     overflow: hidden;
+    padding-bottom: .25em;
     /*transform: translateY(-50%);  */  
 }
 
@@ -106,7 +109,7 @@ img {
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 16em;}
+  to{width: 12.8em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(1,1,1,.75);}
@@ -159,14 +162,16 @@ img {
 }*/
 
 .section.about{
-    box-shadow: 15px 10px 8px #888888;
-    background: #41ade5;
-    color: #f7f7f7;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    height: 50vh;
-    padding-bottom: .5em;
+  /*box-shadow: 15px 10px 8px #888888;*/
+  -moz-box-shadow: 0 0 5px 7px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 0 5px 7px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px 7px rgba(0,0,0,0.2);
+  background: #41ade5;
+  color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  padding-bottom: .5em;
 }
 
 .section.about{
@@ -196,6 +201,7 @@ img {
 .about-desc{
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 1em;
     padding-bottom: 1em;
     font-size: 1.5em;
     color: #f7f7f7;
