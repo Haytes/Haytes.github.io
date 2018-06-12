@@ -4,7 +4,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
  	<script src="scripts/scripts.js"></script>
+
+ 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -12,7 +19,7 @@
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
-  <a href="#resume">Resume</a>
+  <a href="src/files/MacHayterResume.pdf" download>Resume   <i class="fa fa-download "></i></a>
   
 </div>
 
@@ -26,19 +33,106 @@
 
 <div class="section about" id="about">
 	<h1 class="about-header">A Little About Me</h1>
-	<img src="images/profile.jpg" class="about-profile">
+	<img src="src/images/profile.jpg" class="about-profile">
 	<p class="about-desc">Hi! My name is Mac Hayter. I have just recently finished my third year of computer science student at the University of Ottawa. I have a passion to explore and learn new topics within my field of study and am always willing to take on a new challenge.
-	I enjoy being involved in intermurals and with the Computer Scirence Student Association at the University of Ottawa. I have been lucky enough to have had the opprotunity to be involved with my schools student association over the last year as the VP Executive Affairs of the Computer Science Student Association. Throughout the year I participated in weekly meetings presenting any updates in regards to current responsibilities. Throughout these meetings I assisted in planning, organising and running various events with the association. 
+	I enjoy being involved in intermurals and with the Computer Science Student Association at the University of Ottawa. I have been lucky enough to have had the opprotunity to be involved with my schools student association over the last year as the VP Executive Affairs of the Computer Science Student Association. Throughout the year I participated in weekly meetings presenting any updates in regards to current responsibilities. Throughout these meetings I assisted in planning, organising and running various events with the association. 
 	I look forward to the next opprotunity I have and am excited to learn all that it has to teach me.
 	</p>
 </div>
 
-<!-- <div>
-	<h1>Some things I have worked on</h1>
-</div> -->
+<div class="section projects" id="projects">
+	<h1 class="project-header">Some things I have worked on</h1>
 
 
-<div class="section resume" id="resume">
+<div class="support-grid"></div>
+
+<div class="band">
+    <div class="item-1">
+          <a href="https://github.com/Haytes/CookHelper" class="card">
+            <div class="thumb" style="background-image: url(src/images/android_logo.png); background-size: contain;background-repeat: no-repeat;"></div>
+            <article>
+              <h1>Cook Book Helper</h1>
+              <span>Android Mobile Application</span>
+              <p>Lets the user to create new or edit preexisting recipes as well as search recipes base on entered ingredients</p>
+            </article>
+          </a>
+    </div>
+    <div class="item-2">
+          <a href="https://github.com/wesmartin17/SEG3125-Project" class="card">
+            <div class="thumb" style="background-image: url(src/images/android_logo.png); background-size: contain;background-repeat: no-repeat;"></div>
+            <article>
+              <h1>Student Association App</h1>
+              <span>Android Mobile Application</span>
+              <p>Lets members of Computer Science Student Association (CSSA) at the University of Ottawa with a platform to view updates and upcoming events throughout the year.</p>
+            </article>
+          </a>
+    </div>
+    <div class="item-3">
+      <a href="#projects" class="card">
+<div class="thumb" style="background-image: url(src/images/postgreSQL.png); background-size: contain;background-repeat: no-repeat;"></div>        <article>
+          <h1>Smart Fridge Database.</h1>
+          <span>PostgrSQL</span>
+          <p>Allows the user to keep track of the contents of their fridge, the database confirms the ingredients are
+in the fridge for a desired recipe and adjust the quantity according to the amount used when completing
+the recipe.</p>
+        </article>
+      </a>
+    </div>
+    <div class="item-4">
+          <a href="https://github.com/Haytes/Tic-Tac-Toe" class="card">
+            <div class="thumb" style="background-image: url(src/images/python.png); background-size: contain;background-repeat: no-repeat;"></div>
+            <article>
+              <h1>Internet Speed Tracker</h1>
+              <span>Python</span>
+              <p>Performs a speed test on the current network and stores the download speed, upload speed and ping into a database for later comparison.</p>
+            </article>
+          </a>
+    </div>
+    <div class="item-4">
+          <a href="https://github.com/Haytes/Medical-Follow-up-Website" class="card">
+            <div class="thumb" style="background-image: url(src/images/html5css3.png); background-size: contain;background-repeat: no-repeat;"></div>
+            <article>
+              <h1>Medical Follow-Up Site</h1>
+              <span>HTML, CSS</span>
+              <p></p>
+            </article>
+          </a>
+    </div>
+    <div class="item-4">
+          <a href="https://github.com/Haytes/Twilio-Cat-Facts" class="card">
+            <div class="thumb" style="background-image: url(src/images/python.png); background-size: contain;background-repeat: no-repeat;"></div>
+            <article>
+              <h1>Twillio Cat Facts</h1>
+              <span>Python, Twillio</span>
+              <p>Using Twillio SMS the program sends out a text containing a random cat fact and gif.</p>
+            </article>
+          </a>
+    </div>
+    <div class="item-4">
+          <a href="https://github.com/Haytes/Tic-Tac-Toe" class="card">
+            <div class="thumb" style="background-image: url(src/images/tictactoe.png); background-size: contain;background-repeat: no-repeat;"></div> 
+            <article>
+              <h1>Tic-Tac-Toe</h1>
+              <span>Prolog, Scheme, Ruby</span>
+              <p>Different tic-tac-toe game versions. Each made as an introduction when learning the language.</p>
+            </article>
+          </a>
+    </div>
+    <div class="item-4">
+          <a href="https://github.com/Haytes/Highest-Card-Wins" class="card">
+            <div class="thumb" style="background-image: url(src/images/python.png); background-size: contain;background-repeat: no-repeat;"></div>
+            <article>
+              <h1>Highest Card Wins</h1>
+              <span>Python</span>
+              <p>Simple card game where both you and a computer draw a card. Whoever draws the higher card is the winner.</p>
+            </article>
+          </a>
+    </div>  
+  </div>
+</div>
+
+
+<!-- <div class="section resume" id="resume">
 	<h1 class="resume-header">Have a look at my resume!</h1>
 	<a href="" download="mac_hayter_resume">
 		<span class="resume-link">
@@ -47,7 +141,7 @@
 		</span>
   		<p>Download here</p>
 	</a>
-</div>
+</div> -->
 
 <section class="section contact" >
       <div class="contact-links">
