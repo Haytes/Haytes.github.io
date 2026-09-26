@@ -468,6 +468,59 @@ a:hover { text-decoration: underline; }
   padding-top: 0.45rem;
 }
 
+/* ----- screenshot strip ------------------------------------------------------ */
+
+.shot-strip {
+  display: flex;
+  gap: 0.55rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0.2rem 0.15rem 0.45rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.shot {
+  flex: 0 0 auto;
+  height: 172px;
+  aspect-ratio: 16 / 10;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  scroll-snap-align: start;
+  background: var(--bg-alt);
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.15s ease;
+}
+
+.shot:hover img { transform: scale(1.04); }
+.shot:hover { border-color: var(--accent); }
+
+.shot-dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: min(92vw, 1024px);
+  margin: auto;
+}
+
+.shot-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.shot-dialog img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
 .tag {
   padding: 0.14rem 0.6rem;
   border: 1px solid var(--border);

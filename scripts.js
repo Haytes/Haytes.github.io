@@ -32,4 +32,25 @@
 
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
+
+  // Screenshot lightbox: thumbnails link to the full image; with JS enabled the
+  // click opens it in a <dialog> instead. Without JS the link still works.
+  var dialog = document.getElementById("shot-dialog");
+  var dialogImg = dialog ? dialog.querySelector("img") : null;
+
+  if (dialog && dialogImg && typeof dialog.showModal === "function") {
+    Array.prototype.forEach.call(document.querySelectorAll("a[data-shot]"), function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        var thumb = a.querySelector("img");
+        dialogImg.src = a.href;
+        dialogImg.alt = thumb ? thumb.alt : "";
+        dialog.showModal();
+      });
+    });
+
+    dialog.addEventListener("click", function (e) {
+      if (e.target === dialog) dialog.close();
+    });
+  }
 })();
