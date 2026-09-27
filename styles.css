@@ -698,6 +698,7 @@ a:hover { text-decoration: underline; }
   color: var(--accent);
   font-size: 0.84rem;
   font-weight: 700;
+  line-height: 1.2; /* normalize <a> vs <button> height */
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
 }
