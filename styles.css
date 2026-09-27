@@ -299,6 +299,13 @@ a:hover { text-decoration: underline; }
   letter-spacing: -0.01em;
 }
 
+.head-sub {
+  color: var(--text-dim);
+  font-weight: 400;
+  font-size: 0.72em;
+  letter-spacing: 0;
+}
+
 .section-header .index {
   color: var(--accent);
   font-size: 0.9rem;
@@ -476,12 +483,21 @@ a:hover { text-decoration: underline; }
 
 .card .points li { padding-bottom: 0.28rem; }
 
+/* Cards cap at ~462px, so tags and action buttons never share a line —
+   stack them deliberately: tags left, actions right-aligned below. */
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.45rem;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.42rem;
-  margin-top: auto;
-  padding-top: 0.45rem;
 }
 
 /* ----- scrollspy / active nav ------------------------------------------------ */
@@ -632,10 +648,12 @@ a:hover { text-decoration: underline; }
 
 .demo-dots {
   display: flex;
-  gap: 0.4rem;
+  /* Gap keeps each dot's invisible 24px hit area from overlapping its neighbor */
+  gap: 1.05rem;
 }
 
 .demo-dot {
+  position: relative;
   width: 8px;
   height: 8px;
   padding: 0;
@@ -646,12 +664,27 @@ a:hover { text-decoration: underline; }
   transition: background 0.15s ease, transform 0.15s ease;
 }
 
+/* Visible dot is 8px; the invisible ::after grows the touch target to 24px. */
+.demo-dot::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+}
+
 .demo-dot.on {
   background: var(--accent);
   transform: scale(1.25);
 }
 
 /* ----- demo CTA on cards ------------------------------------------------------ */
+
+.card-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
 
 .demo-cta {
   display: inline-flex;
@@ -668,6 +701,14 @@ a:hover { text-decoration: underline; }
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
 }
+
+.demo-cta.solid {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.demo-cta.solid:hover { filter: brightness(1.08); color: #ffffff; }
 
 .demo-cta:hover {
   background: var(--accent);

@@ -41,8 +41,8 @@
   // thumbnails still link to the plain images.
   var DEMOS = {
     inbox: {
-      ctaLabel: "View source",
-      ctaHref: "https://github.com/Haytes/InboxPlease",
+      ctaLabel: "Play it now",
+      ctaHref: "https://haytes.github.io/InboxPlease/",
       steps: [
         {
           img: "src/images/projects/inbox-01-title.jpg",
@@ -153,8 +153,15 @@
       }
       Array.prototype.forEach.call(dotsEl.children, function (dot, i) {
         dot.classList.toggle("on", i === index);
-        dot.setAttribute("aria-selected", i === index ? "true" : "false");
+        if (i === index) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
       });
+
+      // Warm the next image so stepping forward doesn't flash an empty stage.
+      if (current.steps[index + 1]) {
+        var preload = new Image();
+        preload.src = current.steps[index + 1].img;
+      }
     }
 
     function openDemo(key, step) {
@@ -168,13 +175,13 @@
         var dot = document.createElement("button");
         dot.type = "button";
         dot.className = "demo-dot";
-        dot.setAttribute("role", "tab");
-        dot.setAttribute("aria-label", "Step " + (i + 1));
+        dot.setAttribute("aria-label", "Go to step " + (i + 1) + " of " + demo.steps.length);
         dot.addEventListener("click", function () { index = i; render(); });
         dotsEl.appendChild(dot);
       });
 
       render();
+      document.body.style.overflow = "hidden"; // lock background scroll while open
       dialog.showModal();
     }
 
@@ -193,6 +200,29 @@
     dialog.addEventListener("click", function (e) {
       if (e.target === dialog) dialog.close();
     });
+
+    dialog.addEventListener("close", function () {
+      document.body.style.overflow = "";
+    });
+
+    // Swipe between steps on touch devices.
+    var touchX = null;
+    var touchY = null;
+    dialog.addEventListener("touchstart", function (e) {
+      touchX = e.touches[0].clientX;
+      touchY = e.touches[0].clientY;
+    }, { passive: true });
+    dialog.addEventListener("touchend", function (e) {
+      if (touchX === null) return;
+      var dx = e.changedTouches[0].clientX - touchX;
+      var dy = e.changedTouches[0].clientY - touchY;
+      touchX = null;
+      touchY = null;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 2) {
+        if (dx < 0) nextBtn.click();
+        else prevBtn.click();
+      }
+    }, { passive: true });
 
     Array.prototype.forEach.call(document.querySelectorAll("[data-demo]"), function (el) {
       el.addEventListener("click", function (e) {
